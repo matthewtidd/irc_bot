@@ -18,11 +18,20 @@ class Google
 		if link
 			link = CGI::parse(link)["/url?q"]
 		end
-		desc = res.at("./following::div").children[1].text.gsub("\n", "")
+
+		desc = nil
+		desc_element = res.at("./following::div").children[1]
+		if desc_element
+			desc = desc_element.text.gsub("\n", "")
+		end
 	rescue
 		"No results found"
 	else
-		CGI.unescape_html "#{title} - #{desc} (#{link})"
+		if desc
+			CGI.unescape_html "#{title} - #{desc} (#{link})"
+		else
+			CGI.unescape_html "#{title} (#{link})"
+		end
 	end
 
 	def execute(m, query)

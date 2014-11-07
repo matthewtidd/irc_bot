@@ -3,7 +3,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'cgi'
 
-load '../config.rb'
+load './config.rb'
 
 class Dictionary
 	include Cinch::Plugin
