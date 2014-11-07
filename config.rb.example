@@ -1,0 +1,6 @@
+CONFIG_SERVER = "irc.freenode.net"
+CONFIG_NICK = "cinch-bot"
+CONFIG_CHANNELS = ["#cinch-bots"]
+
+# dictionaryapi.com
+CONFIG_DICTIONARY_API_KEY = "00000000000000000000000000"
