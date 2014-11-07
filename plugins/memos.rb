@@ -14,7 +14,7 @@ class MemoPlugin
 	attr_accessor :memos
 
 	match /memo (.+?) (.+)/
-	match /.*/, :method => :consume
+	match /.*/, :method => :consume, :use_prefix => false
 
 	def consume(m)
 		if $memos.has_key?(m.user.nick)

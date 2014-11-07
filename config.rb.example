@@ -4,3 +4,6 @@ CONFIG_CHANNELS = ["#cinch-bots"]
 
 # dictionaryapi.com
 CONFIG_DICTIONARY_API_KEY = "00000000000000000000000000"
+
+# wunderground.com
+CONFIG_WEATHER_API_KEY = "00000000000"
