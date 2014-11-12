@@ -18,6 +18,6 @@ class DataStore
 
 	def put(m, key, value)
 		$client.set(key, value)
-		m.reply("#{key} = #{value}")
+		m.reply("#{value}")
 	end
 end

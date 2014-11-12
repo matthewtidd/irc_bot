@@ -9,6 +9,7 @@ class Dictionary
 	include Cinch::Plugin
 
 	match /dictionary (.+)/
+	match /define (.+)/
 
 	def dictionary(query)
 		url = "http://www.dictionaryapi.com/api/v1/references/collegiate/xml/#{CGI.escape(query)}?key=#{CONFIG_DICTIONARY_API_KEY}"
